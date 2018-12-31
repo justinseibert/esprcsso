@@ -1,0 +1,53 @@
+$frames: (
+  top,
+  right,
+  bottom,
+  left
+);
+
+$axis: (
+  x: (right,left),
+  y: (top,bottom),
+);
+
+$space-map: (
+  minimal: 0.25em,
+  light: 0.75em,
+  medium: 1.5em,
+  heavy: 2.5em,
+);
+
+@function space($key, $amount:1) {
+  @if map-has-key($space-map, $key) {
+    @return map-get($space-map, $key) * $amount;
+  }
+
+  @warn "Unknown `#{$key}` in $space-map.";
+  @return null;
+}
+
+
+@each $k,$v in $space-map {
+  .-frame-#{$k} {
+    padding: $v !important;
+  }
+  .-break-#{$k} {
+    margin-bottom: $v !important;
+  }
+}
+
+@each $frame in $frames {
+    .-unframe-#{$frame} {
+      padding-#{$frame}: 0 !important;
+      margin-#{$frame}: 0 !important;
+    }
+}
+
+@each $k,$v in $axis {
+  .-unframe-#{$k} {
+    @each $frame in $v {
+      padding-#{$frame}: 0 !important;
+      margin-#{$frame}: 0 !important;
+    }
+  }
+}
