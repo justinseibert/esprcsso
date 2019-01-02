@@ -1,0 +1,78 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include -font(header);
+  text-align: left;
+  margin: 0 0 space(light) 0;
+  &.-center {
+    text-align: center;
+  }
+  &.-right {
+    text-align: center;
+  }
+}
+
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.8em;
+}
+h3 {
+  font-size: 1.6em;
+}
+h4 {
+  font-size: 1.4em;
+}
+h5 {
+  font-size: 1.2em;
+}
+h6 {
+  font-size: 1em;
+}
+
+p {
+  @include -font(body);
+  margin: 0;
+  margin-bottom: space(light);
+  font-size: 1em;
+}
+
+strong, b {
+  @include -font(emphasis);
+}
+
+em, i {
+  @include -font(body);
+  font-style: italic;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: color(text);
+  text-decoration: none;
+  transition: color 100ms;
+}
+
+a:hover,
+a:active {
+  color: color(text-active);
+}
+
+table,
+p {
+  a,
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: color(input);
+    @include -font(emphasis);
+  }
+}

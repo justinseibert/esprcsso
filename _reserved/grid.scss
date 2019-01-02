@@ -56,26 +56,26 @@
       box-sizing: border-box;
       width: 100%;
     }
-    &.stretch {
+    &.-stretch {
       align-items: stretch;
     }
-    &.center {
+    &.-center {
       justify-content: center;
     }
-    &.left {
+    &.-left {
       justify-content: flex-start;
       & > .grid {
         margin-left: 0.5%;
         margin-right: 0.5%;
       }
     }
-    &.top {
+    &.-top {
       align-items: flex-start;
     }
-    &.bottom {
+    &.-bottom {
       align-items: flex-end;
     }
-    &.evenly {
+    &.-evenly {
       flex-wrap: nowrap;
     }
   }

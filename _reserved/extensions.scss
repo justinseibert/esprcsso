@@ -60,19 +60,39 @@
   }
 }
 
-@mixin -background-image($width:100%, $height:null) {
-  width: $width;
-  background-color: color(body);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  &:after {
-    display: block;
-    content: '';
-    @if $height {
-      padding-bottom: $height;
-    } @else {
-      padding-bottom: $width;
+$frames: (
+  top,
+  right,
+  bottom,
+  left
+);
+
+$axis: (
+  x: (right,left),
+  y: (top,bottom),
+);
+
+@each $k,$v in $space-map {
+  .-frame-#{$k} {
+    padding: $v !important;
+  }
+  .-break-#{$k} {
+    margin-bottom: $v !important;
+  }
+}
+
+@each $frame in $frames {
+    .-unframe-#{$frame} {
+      padding-#{$frame}: 0 !important;
+      margin-#{$frame}: 0 !important;
+    }
+}
+
+@each $k,$v in $axis {
+  .-unframe-#{$k} {
+    @each $frame in $v {
+      padding-#{$frame}: 0 !important;
+      margin-#{$frame}: 0 !important;
     }
   }
 }

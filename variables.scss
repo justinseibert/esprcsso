@@ -1,0 +1,39 @@
+$breakpoint: (
+  mobile:    414px,
+  tablet:    768px,
+  landscape: 1024px,
+  desktop:   1280px,
+);
+
+$z-map: (
+  hide:       -9999,
+  normal:      1,
+  interactive: 999,
+  alert:       9999,
+  loading:     99999,
+);
+
+$fonts: (
+  default: (
+    family: ("Source Sans Pro", sans-serif),
+    weight: 300,
+    style: normal
+  )
+);
+
+$space-map: (
+  minimal: 0.25em,
+  light:   0.75em,
+  medium:  1.5em,
+  heavy:   2.5em,
+);
+
+$colors: (
+  text:        #222,
+  text-active: #333,
+  input:       #00F,
+  border:      #222,
+  container:   #F5F5F5,
+  accent:      #E5E5E5,
+  body:        #FFF,
+);
