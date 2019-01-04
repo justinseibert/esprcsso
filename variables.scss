@@ -22,6 +22,7 @@ $fonts: (
 );
 
 $space-map: (
+  scroll:  12px,
   minimal: 0.25em,
   light:   0.75em,
   medium:  1.5em,
@@ -29,6 +30,7 @@ $space-map: (
 );
 
 $colors: (
+  scroll:      #222,
   text:        #222,
   text-active: #333,
   input:       #00F,
