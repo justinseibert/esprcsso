@@ -29,6 +29,17 @@
   @extend .-scroll-within;
 }
 
+.-full-container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.-fullscreen-container {
+  @extend .-fullscreen;
+  overflow: auto;
+}
+
 .-hide {
   display: none !important;
   opacity: 0;
