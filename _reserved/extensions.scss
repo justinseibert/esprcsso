@@ -61,13 +61,49 @@
     opacity: 0;
   }
   15% {
-    transform: translate3d(0,4px,0);
+    // transform: translate3d(0,4px,0);
   }
   60% {
     transform: translate3d(0,0,0);
   }
   100% {
     opacity: 1;
+  }
+}
+
+.-loading-animation {
+  animation-name: loading-animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  background-image: repeating-linear-gradient(
+    to top left,
+    color(loading-a) 0%,
+    color(loading-a) 20%,
+
+    color(loading-b) 21%,
+    color(loading-b) 29%,
+
+    color(loading-a) 30%,
+    color(loading-a) 50%,
+    color(loading-a) 70%,
+
+    color(loading-b) 71%,
+    color(loading-b) 79%,
+
+    color(loading-a) 80%,
+    color(loading-a) 100%
+  );
+  background-repeat: repeat;
+  background-size: 50px 50px;
+}
+
+@keyframes loading-animation {
+  0% {
+    background-position: 0 0px;
+  }
+  100% {
+    background-position: 0 300px;
   }
 }
 
