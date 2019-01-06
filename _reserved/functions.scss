@@ -69,7 +69,6 @@
 
 @mixin -background-image($width:100%, $height:null) {
   width: $width;
-  background-color: color(body);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
