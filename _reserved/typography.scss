@@ -36,19 +36,29 @@ h6 {
 
 p {
   @include -font(body);
+  font-size: 1em;
   margin: 0;
   margin-bottom: space(light);
-  font-size: 1em;
 }
 
 strong, b {
-  @include -font(emphasis);
+  @include -font(body-emphasis);
 }
 
-em, i {
+em, i, small {
   @include -font(body);
   font-style: italic;
 }
+
+small {
+  font-size: 80%;
+}
+
+
+p, strong, b, em, i, small, a {
+  line-height: 1.4;
+}
+
 
 a,
 a:link,
@@ -66,13 +76,14 @@ a:active {
 }
 
 table,
-p {
+p,
+li {
   a,
   a:link,
   a:visited,
   a:hover,
   a:active {
     color: color(input);
-    @include -font(emphasis);
+    @include -font(body-emphasis);
   }
 }
