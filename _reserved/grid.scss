@@ -38,6 +38,7 @@
 }
 
 .-full-container {
+  @extend .-scroll-within;
   width: 100%;
   height: 100%;
   overflow: auto;
